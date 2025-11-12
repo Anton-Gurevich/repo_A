@@ -26,18 +26,29 @@ pip install -e .
    ```
    git submodule update --remote --merge
    ```
-2. Make changes in the submodule located at `external/repo_B`.
-3. Commit and push changes in the submodule:
-   ```
-   cd external/repo_B
-   git add .
-   git commit -m "Your commit message"
-   git push origin main
-   ```
-4. Go back to the main project directory, stage the submodule update, and commit:
+   
+2. Make changes in the submodule located at `external/repo_B`. Commit to the submodule repo (inside its folder):
+    ```
+    cd external/repo_B
+    git checkout -b fix/foo
+    git commit -am "Fix: foo"
+    git push origin fix/foo
+    # open PR in the shared-lib repo
+    ```
+   
+3. After merging upstream, update the parent to the new pinned commit:
+    ```
+    cd external/repo_B
+    git fetch
+    git checkout main
+    git pull
+    ```
+
+3. Go back to the main project directory, stage the submodule update, and commit:
    ```
    cd ../..
    git add external/repo_B
    git commit -m "Update submodule to latest commit"
+   # continue working on repo_A as usual
    git push origin main
    ```
