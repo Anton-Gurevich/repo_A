@@ -7,6 +7,16 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.8"
+dependencies = [
+    "tqdm",
+    "pyyaml",
+    "opencv-python",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
@@ -17,14 +27,3 @@ where = ["src"]
 
 [tool.setuptools.package-dir]
 "" = "src"
-
-dependencies = [
-    "tqdm",
-    "pyyaml",
-    "opencv-python",
-]
-
-[dependency-groups]
-dev = [
-    "pytest",
-]
