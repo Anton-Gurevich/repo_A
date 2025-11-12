@@ -1,0 +1,4 @@
+[submodule "external/repo_B"]
+	path = external/repo_B
+	url = https://github.com/Anton-Gurevich/repo_B.git
+	branch = main
