@@ -1,7 +1,7 @@
 [project]
 name = "repo-A"
 version = "0.1.0"
-description = "Example Repository A"
+description = "Example Parent Repository A to use sub-module repo-B"
 authors = [
     {name = "Your Name", email = "you@example.com"},
 ]
@@ -18,3 +18,13 @@ where = ["src"]
 [tool.setuptools.package-dir]
 "" = "src"
 
+dependencies = [
+    "tqdm",
+    "pyyaml",
+    "opencv-python",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
