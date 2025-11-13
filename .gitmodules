@@ -2,3 +2,7 @@
 	path = external/repo_B
 	url = https://github.com/Anton-Gurevich/repo_B.git
 	branch = main
+[submodule "external/repo_C"]
+	path = external/repo_C
+	url = https://github.com/Anton-Gurevich/repo_C.git
+	branch = main
