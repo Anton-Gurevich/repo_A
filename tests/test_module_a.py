@@ -1,7 +1,7 @@
 """
 This is an example test module.
 """
-from module_a import hello
+from repo_a.module_a import hello
 from repo_b import main as repo_b_main
 
 def test_hello():
